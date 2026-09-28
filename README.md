@@ -8,6 +8,6 @@ twórcy lub pozyskaniu informacji jak jakiś element wykonać
 
 ---
 
-# Chcesz sklonować repozytorium? Prosze bardzo
+### Chcesz sklonować repozytorium? Prosze bardzo
 ```bash
 git clone [https://github.com/twoja-nazwa/nazwa-projektu.git]
