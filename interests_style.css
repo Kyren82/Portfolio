@@ -7,8 +7,7 @@ main {
 .card-2,
 .card-3,
 .card-4,
-.card-5,
-.card-6 {
+.card-5{
     width: 100%;
     height: 100vh;
 }
@@ -22,21 +21,15 @@ main {
     background: url(background_interests2.jpg) no-repeat center/cover;
 }
 
-.card-3 {
-    background: url(background_interests3.jpg) no-repeat center/cover;
-}
-
 .card-4 {
-    background: url(background_interests4.jpg) no-repeat center/cover;
+    background: url(background_interests2.jpg) no-repeat center/cover;
 }
 
 .card-5 {
-    background: url(background_interests5.jpg) no-repeat center/cover;
+    background: url(background_interests1.jpg) no-repeat center/cover;
 }
 
-.card-6 {
-    background: url(background_interests6.jpg) no-repeat center/cover;
-}
+
 
 .black-effect {
     width: 100%;
@@ -64,7 +57,7 @@ main {
 }
 
 .card-3 .panel {
-    border-radius: 80px 80px 0px 0px;
+    border-radius: 30px 100px 30px 100px;
 }
 
 .card-4 .panel {
@@ -76,11 +69,6 @@ main {
     flex-direction: column;
 }
 
-.card-6 .panel {
-    border-radius: 30px 100px 30px 100px;
-}
-
-/* Style wspólne dla tytułów i tekstu */
 .card-title {
     font-size: 4.5rem;
     font-weight: 700;
@@ -96,7 +84,6 @@ p {
     letter-spacing: 1px;
 }
 
-/* --- KARTA 1 --- */
 .card-1-left {
     width: 75%;
     height: 100%;
