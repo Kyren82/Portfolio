@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-*{
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -8,13 +8,13 @@
     list-style: none;
 }
 
-.wrapper{
+.wrapper {
     width: 100vw;
     height: 100vh;
     background-color: #f2e9e4;
 }
 
-header{
+header {
     width: 100vw;
     min-height: 10vh;
     background-color: #b29da0;
@@ -23,7 +23,7 @@ header{
     align-items: center;
 }
 
-.head-nav{
+.head-nav {
     /* background-color: #b29da0; */
     height: 10vh;
     min-width: 40%;
@@ -32,46 +32,96 @@ header{
     align-items: center;
 }
 
-.head-nav li{
+.head-nav li {
     border-radius: 20px 0px 20px 0px;
     padding: 1%;
-    transition: all ease-out .3s;
+    transition: all ease-out 0.3s;
 }
 
-.head-nav li:hover{
+.head-nav li:hover {
     background-color: #9a8c98;
     filter: drop-shadow(1px 1px 4px #9a8c98);
     transform: translateY(4px);
 }
 
-.head-nav li a{
-    font-family: "Ubuntu", sans-serif;
+.head-nav li a {
+    font-family: 'Ubuntu', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.head-nav li:active{
-    transform: scale(.9);
+.head-nav li:active {
+    transform: scale(0.9);
 }
 
-main{
+main {
     width: 100%;
     height: 90%;
     display: flex;
 }
 
-.left{
+.left {
     width: 65%;
     height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 10fr;
 }
 
-.right{
+.main-title {
+    display: flex;
+    align-items: center;
+    padding: 3% 0% 0% 5%;
+}
+
+.main-title p {
+    color: #363852;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.main-title p::after {
+    content: '';
+    width: 120%;
+    height: 12.5%;
+    background-color: #363852;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.main-sub-title {
+    padding: 3% 5% 1% 6%;
+}
+
+.main-sub-title p {
+    color: #726D81;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    padding: 1% 45% 0% 6%;
+}
+
+.main-content p, .main-content ul li{
+    color: #9A8C98;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.right {
     background-color: #d8cecc;
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
     width: 35%;
     height: 100%;
 }
-
-
 
 /* footer{
     width: 100%;
