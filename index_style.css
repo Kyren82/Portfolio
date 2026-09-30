@@ -106,13 +106,25 @@ main {
     display: flex;
     flex-direction: column;
     padding: 1% 45% 0% 6%;
+    gap: 1%;
 }
 
-.main-content p, .main-content ul li{
+.main-content p, .main-content-list li{
     color: #9A8C98;
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.main-content p:nth-child(2){
+    color: #726D81;
+}
+
+.main-content-list li{
+    list-style: disc;
+    list-style-position: inside;
+
 }
 
 .right {
