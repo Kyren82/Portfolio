@@ -2,9 +2,10 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portfolio - Kwalifikacje</title>
         <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="qualifications_style.css" />
         <link rel="Icon" href="web_icon.png" />
     </head>
     <body>
@@ -19,9 +20,68 @@
                 </ul>
             </header>
             <main>
-                <div class="panel"></div>
+                <div class="card card-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <p class="title">Kwalifikacja INF.03</p>
+                            <img src="inf034_icon.png" alt="INF.03" />
+                        </div>
+                        <div class="card-back">
+                            <p class="title">Szczegóły INF.03</p>
+                            <p class="description">Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-2">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <p class="title">Kwalifikacja INF.04</p>
+                            <img src="inf034_icon.png" alt="INF.04" />
+                        </div>
+                        <div class="card-back">
+                            <p class="title">Szczegóły INF.04</p>
+                            <p class="description">Projektowanie, programowanie i testowanie aplikacji.</p>
+                            <p class="description"><span style="color: #b26e74; text-shadow: 1px 0px 3px #5c2a2e">W trakcie!</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-3">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <p class="title">Kurs programowania mikroprocesorów i robotów</p>
+                            <img src="mechatronic_icon.png" alt="Mikroprocesory" />
+                        </div>
+                        <div class="card-back">
+                            <p class="title">Szczegóły kursu</p>
+                            <p class="description">Praktyczne podstawy mechatroniki, programowanie mikrokontrolerów oraz budowa układów automatyki.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-4">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <p class="title">Matura</p>
+                            <img src="matura_icon.png" alt="Matura" />
+                        </div>
+                        <div class="card-back">
+                            <p class="title">Szczegóły matury</p>
+                            <p class="description">Wykształcenie średnie ze szczególnym uwzględnieniem przedmiotów ścisłych.</p>
+                            <p class="description"><span style="color: #b26e74; text-shadow: 1px 0px 3px #5c2a2e">W trakcie!</span></p>
+                        </div>
+                    </div>
+                </div>
             </main>
             <!-- <footer></footer> -->
         </div>
+        <script>
+            document.querySelectorAll('.card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('flipped');
+                });
+            });
+        </script>
     </body>
 </html>
