@@ -5,48 +5,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portfolio - Przyszłość</title>
         <link rel="stylesheet" href="styles.css" />
-        <link rel="Icon" href="web_icon.png" />
         <link rel="stylesheet" href="future_style.css" />
+        <link rel="Icon" href="web_icon.png" />
     </head>
     <body>
         <div class="wrapper">
             <header>
-                <ul class="head-nav">
-                    <li><a href="about_me.html">O mnie</a></li>
-                    <li><a href="interests.html">Zainteresowania</a></li>
-                    <li><a href="qualifications.html">Kwalifikacje</a></li>
-                    <li><a href="future.html">Przyszłość</a></li>
-                    <li><a href="index.html">Powrót</a></li>
-                </ul>
+                <nav class="head-nav-container">
+                    <ul class="head-nav">
+                        <li><a href="about_me.html">O mnie</a></li>
+                        <li><a href="interests.html">Zainteresowania</a></li>
+                        <li><a href="qualifications.html">Kwalifikacje</a></li>
+                        <li><a href="future.html">Przyszłość</a></li>
+                        <li><a href="index.html">Powrót</a></li>
+                    </ul>
+                </nav>
             </header>
             <main>
-                <div class="card-1 card">
+                <section class="card-1 card">
                     <div class="black-effect">
-                        <p class="card-1-text">Z czym <span style="font-size: 7rem; color: #a0a3bd">ja</span> wiąże swoją przyszłość?</p>
+                        <h1 class="card-1-text">Z czym <span class="highlight-me">ja</span> wiążę swoją przyszłość?</h1>
                     </div>
-                </div>
-                <div class="card-2 card">
+                </section>
+                <section class="card-2 card">
                     <div class="card-2-left">
-                        <p class="card-2-title">Plan główny</p>
+                        <h2 class="card-2-title">Plan główny</h2>
                         <p class="card-2-left-text">
                             Studia! <br />
                             Będzie to idealny czas na poznanie siebie, co ja tak naprawdę chcę od życia, przy okazji nauczę się wiele ciekawych rzeczy. <br />Nie bez powodu wiele ludzi twierdzi że studia to najlepszy czas w swoim życiu. Tworzenie znajomości i czerpanie z życia garściami będzie smerfastyczne.
                         </p>
                     </div>
                     <div class="card-2-right">
-                        <p class="card-2-right-text"><span style="font-size: 2rem; color: #bda0a1">Cyberbezpieczeństwo?</span> <span style="font-size: 1.8rem; color: #a0a3bd">Matematyka</span>, a może coś innego? Wszystko czas pokaże jednak pewnym jest to że matematyka zostanie przy mnie na długo, gdyż postaram się wyciśnąć z niej jak najwięcej.</p>
-                        <p class="card-2-right-text">Co później? Nie mam <span style="font-size: 2rem; color: #a1bda0">zielonego</span> pojęcia, ale wiem jedno, będzie trzeba iść z głową podniesioną do góry i nie zatrzymywać się. Praca, nieskończone dokształcanie się i odkrywanie nowych pasji to będzie mój cel.</p>
+                        <p class="card-2-right-text"><span class="highlight-cyber">Cyberbezpieczeństwo?</span> <span class="highlight-math">Matematyka</span>, a może coś innego? Wszystko czas pokaże jednak pewnym jest to że matematyka zostanie przy mnie na długo, gdyż postaram się wycisnąć z niej jak najwięcej.</p>
+                        <p class="card-2-right-text">Co później? Nie mam <span class="highlight-green">zielonego</span> pojęcia, ale wiem jedno, będzie trzeba iść z głową podniesioną do góry i nie zatrzymywać się. Praca, nieskończone dokształcanie się i odkrywanie nowych pasji to będzie mój cel.</p>
                     </div>
-                </div>
-                <div class="card-3 card">
-                    <p class="card-3-title">Oke, a co jeżeli nie wyjdzie?</p>
+                </section>
+                <section class="card-3 card">
+                    <h2 class="card-3-title">Oke, a co jeżeli nie wyjdzie?</h2>
                     <div class="card-3-panel">
                         <div class="card-3-box">
-                            <p>Zostanę korepetytorem!</p>
-                            <p>Pokazywanie ludziom na czym polega dany temat z matematyki w prosty sposób zawsze było moją mocną stroną. Jeżeli dany temat rozumiem to potrafię go wytłumaczyć prostymi słowami i na odrót. Plus tego jest też taki że zawsze znajdą się osoby nie douczone lub pod ścianą, którym mógłbym pomóc. Za to jeżeli nie uda mi się jakoś dawać korepetycji to zostałbym nauczycielem i uczyłbym w szkole. Może by to było cięższe, fakt, ale to nie zmienia faktu że byłaby to praca idealna dla mnie.</p>
+                            <h3>Zostanę korepetytorem!</h3>
+                            <p>
+                                Pokazywanie ludziom na czym polega dany temat z matematyki w prosty sposób zawsze było moją mocną stroną. Jeżeli dany temat rozumiem to potrafię go wytłumaczyć prostymi słowami i na odwrót. Plus tego jest też taki że zawsze znajdą się osoby niedouczone lub pod ścianą, którym mógłbym pomóc. Za to jeżeli nie uda mi się jakoś dawać korepetycji to zostałbym nauczycielem i uczyłbym w szkole. Może by to było cięższe, fakt, ale to nie zmienia faktu że byłaby to praca
+                                idealna dla mnie.
+                            </p>
                         </div>
                     </div>
-                </div>
+                </section>
             </main>
         </div>
         <script>
@@ -66,12 +71,13 @@
 
                     setTimeout(() => {
                         isScrolling = false;
-                    }, 400);
+                    }, 500);
                 }
 
                 window.addEventListener(
                     'wheel',
                     (event) => {
+                        if (window.innerWidth <= 900) return;
                         event.preventDefault();
                         if (isScrolling) return;
 
@@ -85,7 +91,7 @@
                 );
 
                 window.addEventListener('keydown', (event) => {
-                    if (isScrolling) return;
+                    if (isScrolling || window.innerWidth <= 900) return;
 
                     if (['ArrowDown', 'PageDown', 'Space'].includes(event.code)) {
                         event.preventDefault();
@@ -106,16 +112,8 @@
                     { passive: true },
                 );
 
-                window.addEventListener(
-                    'touchmove',
-                    (event) => {
-                        event.preventDefault();
-                    },
-                    { passive: false },
-                );
-
                 window.addEventListener('touchend', (event) => {
-                    if (isScrolling) return;
+                    if (isScrolling || window.innerWidth <= 900) return;
 
                     const touchEndY = event.changedTouches[0].clientY;
                     const diffY = touchStartY - touchEndY;

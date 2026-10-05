@@ -1,123 +1,136 @@
-html, body {
-    overflow: hidden;
-    height: 100%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none;
+@media (min-width: 901px) {
+    html,
+    body {
+        overflow: hidden;
+        height: 100%;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 main {
     width: 100%;
-    min-height: 90%;
 }
 
 .card-1,
 .card-2,
 .card-3 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
 }
 
 .card-1 {
-    background: url(background_interests1.jpg) no-repeat center/cover;
+    background: url(background_interests1.jpg) no-repeat center center / cover;
 }
 
 .card-2 {
-    background: url(background_interests2.jpg) no-repeat center/cover;
+    background: url(background_interests2.jpg) no-repeat center center / cover;
 }
 
 .card-3 {
-    background: url(background_interests3.jpg) no-repeat center/cover;
+    background: url(background_interests3.jpg) no-repeat center center / cover;
 }
 
 .black-effect {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: clamp(1rem, 3vw, 3rem);
 }
 
 .panel {
-    width: 65%;
-    height: 80%;
-    background-color: #F2E9E4;
+    width: min(90%, 72rem);
+    min-height: min(80vh, 40rem);
+    background-color: #f2e9e4;
     display: flex;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
 }
 
 .card-1 .panel {
-    border-radius: 80px 0px 80px 0px;
+    border-radius: clamp(2rem, 5vw, 5rem) 0 clamp(2rem, 5vw, 5rem) 0;
 }
 
 .card-2 .panel {
-    border-radius: 0px 80px 0px 80px;
+    border-radius: 0 clamp(2rem, 5vw, 5rem) 0 clamp(2rem, 5vw, 5rem);
 }
 
 .card-3 .panel {
-    border-radius: 50px;
+    border-radius: clamp(1.5rem, 4vw, 3.125rem);
 }
 
 .column-panel {
     flex-direction: column;
-    padding: 3% 5%;
-    box-sizing: border-box;
+    padding: clamp(1.5rem, 4vw, 3.5rem);
 }
 
 .card-title {
-    font-size: 4rem;
+    font-size: clamp(2rem, 3.5vw + 1rem, 3.75rem);
     font-weight: 700;
     font-family: 'Josefin Sans', sans-serif;
     color: #363852;
+    line-height: 1.1;
 }
 
 .title-center {
     text-align: center;
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 1.5rem;
 }
 
 .card-1-left {
     width: 65%;
-    height: 100%;
-    padding: 5%;
-    box-sizing: border-box;
+    padding: clamp(1.5rem, 4vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-1-right {
     width: 35%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5%;
-    box-sizing: border-box;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .bio-text {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: clamp(1rem, 0.8vw + 0.6rem, 1.35rem);
+    font-weight: 500;
     font-family: 'Ubuntu', sans-serif;
     color: #726d81;
-    letter-spacing: 1px;
+    letter-spacing: 0.02em;
     line-height: 1.6;
-    margin-top: 3%;
+    margin-top: 1.25rem;
 }
 
 .avatar-box {
-    width: 220px;
-    height: 220px;
+    width: clamp(8rem, 15vw, 13.75rem);
+    height: clamp(8rem, 15vw, 13.75rem);
     border-radius: 50%;
-    border: 5px solid #363852;
+    border: 0.35rem solid #363852;
     overflow: hidden;
     background-color: #d8cecc;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .avatar-box img {
@@ -128,76 +141,79 @@ main {
 
 .swot-grid {
     display: flex;
-    gap: 4%;
+    gap: 1.5rem;
     width: 100%;
-    height: 70%;
-    margin-top: 2%;
+    flex: 1;
 }
 
 .swot-card {
     flex: 1;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 20px;
-    padding: 4%;
-    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 1.25rem;
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    display: flex;
+    flex-direction: column;
 }
 
 .swot-card h3 {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 2.2rem;
+    font-size: clamp(1.35rem, 1.5vw + 0.5rem, 2rem);
     color: #363852;
-    margin-bottom: 4%;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
 .swot-card ul {
     list-style-type: square;
-    padding-left: 8%;
+    padding-left: 1.25rem;
 }
 
 .swot-card li {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: clamp(0.95rem, 0.8vw + 0.5rem, 1.2rem);
+    font-weight: 500;
     color: #726d81;
-    margin-bottom: 3%;
-    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
 }
 
 .quiz-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     width: 100%;
-    height: 70%;
+    flex: 1;
     justify-content: center;
 }
 
 .quiz-item {
     width: 100%;
-    height: 70px;
+    min-height: 4.5rem;
     background-color: #4a4e69;
-    border-radius: 15px;
+    border-radius: 1rem;
     cursor: pointer;
     position: relative;
     perspective: 1000px;
 }
 
-.quiz-front, .quiz-back {
+.quiz-front,
+.quiz-back {
     position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.3rem;
+    font-size: clamp(0.95rem, 0.8vw + 0.5rem, 1.25rem);
     font-weight: 700;
-    border-radius: 15px;
-    padding: 0 3%;
-    box-sizing: border-box;
-    transition: transform 0.4s ease;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    transition: transform 0.5s ease;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .quiz-front {
@@ -217,4 +233,32 @@ main {
 
 .quiz-item.flipped .quiz-back {
     transform: rotateX(0deg);
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .panel {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        border-radius: 1.5rem !important;
+    }
+
+    .card-1-left,
+    .card-1-right {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .card-1-right {
+        order: -1;
+    }
+
+    .swot-grid {
+        flex-direction: column;
+    }
+
+    .quiz-item {
+        min-height: 5.5rem;
+    }
 }

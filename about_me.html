@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
     <head>
         <meta charset="UTF-8" />
@@ -11,23 +11,23 @@
     <body>
         <div class="wrapper">
             <header>
-                <ul class="head-nav">
-                    <li><a href="about_me.html">O mnie</a></li>
-                    <li><a href="interests.html">Zainteresowania</a></li>
-                    <li><a href="qualifications.html">Kwalifikacje</a></li>
-                    <li><a href="future.html">Przyszłość</a></li>
-                    <li><a href="index.html">Powrót</a></li>
-                </ul>
+                <nav class="head-nav-container">
+                    <ul class="head-nav">
+                        <li><a href="about_me.html">O mnie</a></li>
+                        <li><a href="interests.html">Zainteresowania</a></li>
+                        <li><a href="qualifications.html">Kwalifikacje</a></li>
+                        <li><a href="future.html">Przyszłość</a></li>
+                        <li><a href="index.html">Powrót</a></li>
+                    </ul>
+                </nav>
             </header>
             <main>
-                <div class="card-1">
+                <section class="card-1">
                     <div class="black-effect">
                         <div class="panel">
                             <div class="card-1-left">
-                                <p class="card-title">Kim jestem?</p>
-                                <p class="bio-text">
-                                    Nazywam się Eryk Kaletka, pochodzę ze Skawicy, oraz aktualnie jestem w 4 klasie technikum im. Walerego Goetla w Suchej Beskidzkiej na kierunku programista. Planuje pisać mature rozszerzoną z matematyki, a potem zobaczymy &lt;:
-                                </p>
+                                <h1 class="card-title">Kim jestem?</h1>
+                                <p class="bio-text">Nazywam się Eryk Kaletka, pochodzę ze Skawicy, oraz aktualnie jestem w 4 klasie technikum im. Walerego Goetla w Suchej Beskidzkiej na kierunku programista. Planuje pisać maturę rozszerzoną z matematyki, a potem zobaczymy &lt;:</p>
                             </div>
                             <div class="card-1-right">
                                 <div class="avatar-box">
@@ -36,38 +36,38 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="card-2">
+                <section class="card-2">
                     <div class="black-effect">
                         <div class="panel column-panel">
-                            <p class="card-title title-center">Mocne i słabe strony</p>
+                            <h2 class="card-title title-center">Mocne i słabe strony</h2>
                             <div class="swot-grid">
                                 <div class="swot-card strength">
                                     <h3>Mocne strony</h3>
                                     <ul>
                                         <li>Myślenie analityczno-matematyczne</li>
-                                        <li>szybkie znajdywanie korelacji</li>
-                                        <li>Lubię wyzwania i podejmuje rękawicę</li>
+                                        <li>Szybkie znajdywanie korelacji</li>
+                                        <li>Lubię wyzwania i podejmuję rękawicę</li>
                                     </ul>
                                 </div>
                                 <div class="swot-card weakness">
                                     <h3>Słabe strony</h3>
                                     <ul>
-                                        <li>Czasem pracuje na 7h nonstop, a czasem wogule</li>
+                                        <li>Czasem pracuję po 7h non-stop, a czasem w ogóle</li>
                                         <li>Trudność z zaczynaniem wszelako pojętych działań</li>
-                                        <li>Często overthinkuje wszystko zbyt mocno i doszukuję czegoś na siłę</li>
+                                        <li>Często overthinkuję wszystko zbyt mocno i doszukuję się czegoś na siłę</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="card-3">
+                <section class="card-3">
                     <div class="black-effect">
                         <div class="panel column-panel">
-                            <p class="card-title title-center">Fakty i Mity o mnie</p>
+                            <h2 class="card-title title-center">Fakty i Mity o mnie</h2>
                             <div class="quiz-container">
                                 <div class="quiz-item" onclick="this.classList.toggle('flipped')">
                                     <div class="quiz-front">Czy jest jakikolwiek kontakt do mnie?</div>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </main>
         </div>
 
@@ -105,12 +105,13 @@
 
                     setTimeout(() => {
                         isScrolling = false;
-                    }, 400);
+                    }, 500);
                 }
 
                 window.addEventListener(
                     'wheel',
                     (event) => {
+                        if (window.innerWidth <= 900) return;
                         event.preventDefault();
                         if (isScrolling) return;
 
@@ -120,11 +121,11 @@
                             scrollToSection(currentIndex - 1);
                         }
                     },
-                    { passive: false }
+                    { passive: false },
                 );
 
                 window.addEventListener('keydown', (event) => {
-                    if (isScrolling) return;
+                    if (isScrolling || window.innerWidth <= 900) return;
 
                     if (['ArrowDown', 'PageDown', 'Space'].includes(event.code)) {
                         event.preventDefault();
@@ -142,19 +143,11 @@
                     (event) => {
                         touchStartY = event.touches[0].clientY;
                     },
-                    { passive: true }
-                );
-
-                window.addEventListener(
-                    'touchmove',
-                    (event) => {
-                        event.preventDefault();
-                    },
-                    { passive: false }
+                    { passive: true },
                 );
 
                 window.addEventListener('touchend', (event) => {
-                    if (isScrolling) return;
+                    if (isScrolling || window.innerWidth <= 900) return;
 
                     const touchEndY = event.changedTouches[0].clientY;
                     const diffY = touchStartY - touchEndY;

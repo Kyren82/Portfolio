@@ -11,20 +11,24 @@
     <body>
         <div class="wrapper">
             <header>
-                <ul class="head-nav">
-                    <li><a href="about_me.html">O mnie</a></li>
-                    <li><a href="interests.html">Zainteresowania</a></li>
-                    <li><a href="qualifications.html">Kwalifikacje</a></li>
-                    <li><a href="future.html">Przyszłość</a></li>
-                    <li><a href="index.html">Powrót</a></li>
-                </ul>
+                <nav class="head-nav-container">
+                    <ul class="head-nav">
+                        <li><a href="about_me.html">O mnie</a></li>
+                        <li><a href="interests.html">Zainteresowania</a></li>
+                        <li><a href="qualifications.html">Kwalifikacje</a></li>
+                        <li><a href="future.html">Przyszłość</a></li>
+                        <li><a href="index.html">Powrót</a></li>
+                    </ul>
+                </nav>
             </header>
             <main>
                 <div class="card card-1">
                     <div class="card-inner">
                         <div class="card-front">
                             <p class="title">Kwalifikacja INF.03</p>
-                            <img src="inf034_icon.png" alt="INF.03" />
+                            <div class="img-wrapper">
+                                <img src="inf034_icon.png" alt="INF.03" />
+                            </div>
                         </div>
                         <div class="card-back">
                             <p class="title">Szczegóły INF.03</p>
@@ -37,12 +41,14 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <p class="title">Kwalifikacja INF.04</p>
-                            <img src="inf034_icon.png" alt="INF.04" />
+                            <div class="img-wrapper">
+                                <img src="inf034_icon.png" alt="INF.04" />
+                            </div>
                         </div>
                         <div class="card-back">
                             <p class="title">Szczegóły INF.04</p>
                             <p class="description">Projektowanie, programowanie i testowanie aplikacji.</p>
-                            <p class="description"><span style="color: #b26e74;">W trakcie!</span></p>
+                            <p class="description"><span class="status-badge">W trakcie!</span></p>
                         </div>
                     </div>
                 </div>
@@ -51,7 +57,9 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <p class="title">Kurs programowania mikroprocesorów i robotów</p>
-                            <img src="mechatronic_icon.png" alt="Mikroprocesory" />
+                            <div class="img-wrapper">
+                                <img src="mechatronic_icon.png" alt="Mikroprocesory" />
+                            </div>
                         </div>
                         <div class="card-back">
                             <p class="title">Szczegóły kursu</p>
@@ -64,17 +72,18 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <p class="title">Matura</p>
-                            <img src="matura_icon.png" alt="Matura" />
+                            <div class="img-wrapper">
+                                <img src="matura_icon.png" alt="Matura" />
+                            </div>
                         </div>
                         <div class="card-back">
                             <p class="title">Szczegóły matury</p>
                             <p class="description">Wykształcenie średnie ze szczególnym uwzględnieniem przedmiotów ścisłych.</p>
-                            <p class="description"><span style="color: #b26e74;">W trakcie!</span></p>
+                            <p class="description"><span class="status-badge">W trakcie!</span></p>
                         </div>
                     </div>
                 </div>
             </main>
-            <!-- <footer></footer> -->
         </div>
         <script>
             document.querySelectorAll('.card').forEach((card) => {
